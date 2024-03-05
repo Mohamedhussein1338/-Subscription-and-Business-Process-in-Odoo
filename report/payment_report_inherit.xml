@@ -1,0 +1,10 @@
+<odoo>
+    <template id="payment_inherit_report" inherit_id="account.report_payment_receipt_document">
+        <xpath expr="//div[@class='page']" position="inside">
+            <!-- Your custom text in the center -->
+            <div style="text-align: center; font-size: 16px; margin-top: 20px;">
+                Welcome To odoo
+            </div>
+        </xpath>
+    </template>
+</odoo>

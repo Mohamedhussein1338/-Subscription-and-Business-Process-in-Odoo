@@ -1,0 +1,20 @@
+{
+    'name': 'Subscription Reminder',
+    'version': '15.0.1.0.0',
+    'category': 'Sales',
+    'sequence': -52,
+    'depends': ['base', 'sale','hr','account','sale_subscription'],
+    'data': ['security/ir.model.access.csv',
+              'data/cron_job.xml',
+             'views/seal_ order_ inherit.xml',
+             'views/subscription_reminder_view.xml',
+             'views/hr_employee_inherit.xml',
+             'views/account_move_ inherit.xml',
+             'data/subscription_reminder_template.xml',
+             'report/payment_report_inherit.xml'
+             ],
+    # 'installable': True,
+    'auto_install': False,
+    'application': True,
+    'license': 'LGPL-3',
+}

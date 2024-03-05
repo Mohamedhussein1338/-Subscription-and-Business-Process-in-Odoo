@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Window Action -->
+        <record id="action_subscription_reminder" model="ir.actions.act_window">
+            <field name="name">Subscription Reminders</field>
+            <field name="res_model">subscription.reminder</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- Menu Item -->
+
+
+        <menuitem id="menu_subscription_reminder" name="Reminders"/>
+        <menuitem id="submenu_subscription_reminder" name="Subscription Reminders"
+                parent="menu_subscription_reminder"
+                  action="action_subscription_reminder"/>
+
+        <!-- Tree View -->
+        <record id="view_subscription_reminder_tree" model="ir.ui.view">
+            <field name="name">subscription.reminder.tree</field>
+            <field name="model">subscription.reminder</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="subscription_id"/>
+                    <field name="subscription_template_id"/>
+                    <field name="customer_email"/>
+                    <field name="subscription_start_date"/>
+                    <field name="subscription_end_date"/>
+                    <field name="days_remaining"/>
+                    <field name="email_sent"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_subscription_reminder_form" model="ir.ui.view">
+            <field name="name">subscription.reminder.form</field>
+            <field name="model">subscription.reminder</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <heeder>
+                            <button name="send_subscription_email" string="Send Email" class="oe_highlight" data-hotkey="v"
+                                    type="object"/>
+
+                        </heeder>
+                        <group>
+                            <field name="subscription_id"/>
+                            <field name="subscription_template_id"/>
+                            <field name="customer_email"/>
+                        </group>
+                        <group>
+                            <field name="subscription_start_date"/>
+                            <field name="subscription_end_date"/>
+                            <field name="days_remaining"/>
+                            <field name="email_sent"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
