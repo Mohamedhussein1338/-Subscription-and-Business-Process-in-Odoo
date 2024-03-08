@@ -1,15 +1,26 @@
-# odoo-tasks
-1-In case of monthly subscription, customer should got an Email  before 7 days(date of next invoice) to renew or cancel the subscription.
+# Subscription and Business Process in Odoo
+This repository contains customizations and enhancements for an Odoo implementation, focusing on improving subscription management, CRM processes, employee creation, payment reports, and sales order confirmations. The following features have been implemented:
 
-2 - when create a lead in crm.lead , i want to create a project.
+1-Subscription Reminder Email:
 
-3 - when create employee its already create a contact
-i want field name (active) im hr.employee and res.partner
-when create a employee , if the active = true , its updated it in res.partner and take attribute (readonly).
+A monthly subscription feature that sends customers an email notification 7 days before the next invoice date.
+Provides users with the option to renew or cancel their subscription conveniently.
+CRM Lead to Project Automation:
 
-4-inherit payment pdf report and add this text ( Odoo 17 ) in the center.
+2-Automatically creates a project in Odoo when a new lead is created in crm.lead.
+Streamlines the process of converting leads into actionable projects.
+Employee and Contact Integration:
 
-5-in sale.order i want if user click on confirm button , all fields become readonly.
-6- using fields_view _get method 
+3-Upon creating an employee in hr.employee, a corresponding contact is automatically generated.
+Introduces an 'active' field in both hr.employee and res.partner to control the visibility and update behavior.
+If 'active' is set to true during employee creation, it updates the 'active' status in res.partner and sets the attribute as 'readonly'.
+Customized Payment PDF Report:
+
+4-Inherits the payment PDF report and adds a prominent "Odoo 17" text in the center.
+Enhances the visual identity of payment reports for Odoo version 17.
+Sales Order Confirmation Enhancement:
+
+5-Implements a feature in sale.order where clicking the 'confirm' button renders all fields as 'readonly'.
+Ensures data integrity and prevents unintentional modifications after order confirmation.
 
 
